@@ -1,0 +1,6 @@
+.idea
+composer.lock
+vendor
+Cache
+tests/config.php
+tests/config_data.php
