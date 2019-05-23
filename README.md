@@ -69,6 +69,11 @@ $taskLib = new Task($config);
 $taskData = []; // 详见文档
 $taskLib->createTask($taskData);
 
+// 编辑任务
+$taskId = 8888; // 详见文档
+$editData = []; // 详见文档
+$taskLib->createTask($taskId, $editData);
+
 
 // 设置任务开始
 $taskLib->start('任务ID');
