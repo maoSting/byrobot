@@ -22,6 +22,24 @@ class Task extends BasicBYRobot {
     }
 
     /**
+     * 编辑任务
+     * @param int   $taskId
+     *                     任务ID
+     * @param array $data
+     *                   配置参数，详见百应文档
+     *
+     * @return mixed
+     * @throws \BYRobot\Exceptions\InvalidResponseException
+     * @throws \ErrorException
+     * Author: DQ
+     */
+    public function editTask($taskId = 0, $data = []){
+        $taskData = array_merge($data, [ 'taskId'=>$taskId ]);
+        $url = 'http://api.byrobot.cn/openapi/v1/task/update';
+        return $this->httpPostJson($url, $taskData);
+    }
+
+    /**
      *
      * 启动任务接口
      *
