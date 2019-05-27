@@ -46,6 +46,17 @@ class BasicBYRobot {
         return self::VERSION;
     }
 
+    /**
+     * 遇到错误是否再次尝试
+     *
+     * @param bool $bool
+     *                  true 再次尝试
+     *                  false 不会再次尝试
+     * Author: DQ
+     */
+    public function tryAgain($bool = false){
+        $this->_isTry = $bool == false;
+    }
 
 
     /**
