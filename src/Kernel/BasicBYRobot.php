@@ -26,7 +26,6 @@ class BasicBYRobot {
 
 
     public function __construct(array $options) {
-        date_default_timezone_set("GMT");
         if(empty($options['app_key'])){
             throw new InvalidArgumentException('miss config [app_id]');
         }
@@ -105,7 +104,7 @@ class BasicBYRobot {
      */
     public function httpGetJson($url){
         try{
-            $date = date("D, d M Y H:i:s e");
+            $date = gmdate ("D, d M Y H:i:s")." GMT";
             $this->registerApi(__FUNCTION__, func_get_args());
             return DataTransform::json2arr(RequestTool::get(
                 $url,
@@ -139,7 +138,7 @@ class BasicBYRobot {
      */
     public function httpPostJson($url, $data){
         try{
-            $date = date("D, d M Y H:i:s e");
+            $date = gmdate ("D, d M Y H:i:s")." GMT";
             $this->registerApi(__FUNCTION__, func_get_args());
             return DataTransform::json2arr(RequestTool::post(
                 $url,
