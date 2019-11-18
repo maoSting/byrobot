@@ -1,5 +1,8 @@
 # byai robot PHP Composer 扩展包
 
+[![Build Status](https://travis-ci.org/maoSting/byrobot.svg?branch=master)](https://travis-ci.org/maoSting/byrobot)
+
+
 https://www.byai.com/
 
 
